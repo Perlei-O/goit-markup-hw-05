@@ -162,19 +162,7 @@ position: relative;
   fill: currentColor;
 }
 
-.current-logo::after {
-  content: '';
-position: absolute;
-width: 62%;
-height: 4px;
-border-radius: 2px;
-background-color: var(--accent-color);
-display: block;
-margin-top: 28px;
-margin-bottom: 0;
-left: 0;
-bottom: -26px;
-}
+
 
 .current-studio::after {
   content: '';
@@ -200,43 +188,6 @@ margin-top: 28px;
 margin-bottom: 0;
 }
 
-.current-contact::after {
-  content: '';
-position: absolute;
-width:67px;
-height: 4px;
-border-radius: 2px;
-background-color: var(--accent-color);
-display: block;
-margin-top: 28px;
-margin-bottom: 0;
-}
-
-.current-mail::after {
-  content: '';
-position: absolute;
-width:135px;
-height: 4px;
-border-radius: 2px;
-background-color: var(--accent-color);
-display: block;
-margin-top: 28px;
-margin-bottom: 0;
-margin-left: 28px;
-}
-
-.current-tel::after {
-  content: '';
-position: absolute;
-width:122px;
-height: 4px;
-border-radius: 2px;
-background-color: var(--accent-color);
-display: block;
-margin-top: 28px;
-margin-bottom: 0;
-margin-left: 23px;
-}
 
 .hero {
   background-image: linear-gradient(
@@ -450,7 +401,7 @@ margin-left: 23px;
   display: block;
   border-radius: 50%;
   color: #afb1b8;
-  background-color: white;
+ 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -502,6 +453,18 @@ margin-left: 23px;
   margin-bottom: 94px;
 }
 
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 16px 32px;
+  width: 170px;
+  height: 92px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .clients-logo {
   display: flex;
   align-items: center;
@@ -520,14 +483,19 @@ margin-left: 23px;
 }
 
 .clients-logo:hover {
-  border: 1px solid #2196f3;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
-
 .clients-logo:focus {
-  border: 1px solid #2196f3;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
-
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
 
 .icon-border {
   display: flex;
@@ -539,12 +507,12 @@ margin-left: 23px;
   fill: #afb1b8;
   width: 106px;
   height: 60px;
-  height: 50%;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-logo:hover {
-  fill: #2196f3;
+.icon-logo:hover,
+.icon-logo:focus {
+  fill: var(--accent-color);
 }
 
 .footer {
@@ -801,7 +769,9 @@ overflow: hidden;
 }
 
 .footer-item:focus {
+ fill: white;
   background-color: var(--accent-color);
+  border-radius: 50%;
 }
 
 .backdrop {
